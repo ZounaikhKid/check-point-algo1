@@ -1,0 +1,25 @@
+ALGORITHM sentence
+VAR
+char:STRING;
+nbm : INTEGER :=1;
+voyel:INTEGER :=0;
+nbm-char:INTEGER;
+
+BEGIN
+REPEAT
+    read (char)
+UNTIL (char [length -1]=".")
+FOR i FROM 0 TO char.length-1 STEP step  DO
+IF (char[i]=" ") THEN
+    nbm:= nbm+1;
+END_IF
+IF(char[i]="a"OR char[i]="e" OR char[i]= "i" OR char[i]= "u" OR char[i]="y" OR char[i]="A"OR char[i]="E" OR char[i]= "I" OR char[i]= "U" OR char[i]="Y")) THEN
+    voyel:=voyel+1 ;
+END_IF
+END_FOR
+write (nbm) ;
+write (voyel) ;
+nbm-char := char.length - nbm ;
+write(nbm-char); 
+
+END
